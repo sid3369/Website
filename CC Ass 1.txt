@@ -1,0 +1,24 @@
+create 2 files
+1) main.py
+
+import webapp2
+
+class MainPage(webapp2.RequestHandler):
+    def get(self):
+        self.response.out.write('Hello World')
+app = webapp2.WSGIApplication([('/', MainPage)],debug=True)
+
+2)app.yaml
+
+runtime: python27
+threadsafe: true
+
+handlers:
+- url: /
+  script: main.app
+
+
+go to googlecloud sdk shell 
+py "path of google cloud sdk bin \dev_appserver.py" "path of the folder in which the 2 diles are present"
+
+paste the link of localhost on browser and click of default

@@ -1,0 +1,39 @@
+create a folder(folder1) with 2 files
+Create a docker file named-  Dockerfile
+create one js file -  aditya.js
+in js file, write : 
+  	console.log("name : aditya ekatpure");
+	console.log("roll : 267351");
+	console.log("Division : 1");
+	console.log("Gender : M");
+
+Inside the docker file : 
+	FROM node:alpine
+	copy . /folder1
+	cmd node /folder1/aditya.js
+
+OPEN TERMINAL 
+cd 
+docker --version
+node aditya.js
+docker build -t folder1 .
+docker images
+
+
+
+
+3. Create Docker environment in docker desktop
+4. Create Directory in VS using terminal, using mkdir directory-name command (mkdir 
+xyz) and move to directory using cd directory-name(cd xyz)
+5. Create any type of file inside xyz directory (Example a.js)
+6. Run file on terminal using node command (node a.js) just to check there are no 
+problems with file
+7. Create file inside xyz directory named as Dockerfile (D is always capital)
+8. In Dockerfile, write Instructions and arguments for that instructions
+FROM node:alpine (node is base image for nodejs and alpine is linux distribution)
+COPY . /cd
+CMD node /cd/a.js
+9. Write command on terminal, docker build –t xyz . 
+This command will create image for your folder. you can check image using docker 
+image ls or you can check in image part of docker desktop
+10. Run docker using docker run xyz comman

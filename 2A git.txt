@@ -1,0 +1,13 @@
+git config –global user.name "akshay"
+git config –global user.email "akshay12@gmail.com"
+git init
+mkdir ass2A     
+git --version
+git add "file.txt"
+git add .
+git status
+git remote add origin "repo link"
+git commit
+git commit -m "first commit"
+git status
+git push -u origin master
